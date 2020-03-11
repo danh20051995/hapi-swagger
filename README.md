@@ -1,5 +1,8 @@
 # hapi-swagger
 
+Fork from https://github.com/glennjones/hapi-swagger custom for hapi v18
+
+# Description
 This is a [OpenAPI (aka Swagger)](https://openapis.org/) plug-in for [Hapi](https://hapi.dev/) When installed it will self document the API interface
 in a project.
 
@@ -22,7 +25,7 @@ in a project.
 You can add the module to your Hapi using npm:
 
 ```bash
-> npm install hapi-swagger --save
+> npm install hapi18-swagger --save
 ```
 
 If you want to view the documentation from your API you will also need to install the `inert` and `vision` plugs-ins which support templates and static
@@ -46,7 +49,7 @@ In your Hapi apps main JavaScript file add the following code to created a Hapi 
 const Hapi = require('@hapi/hapi');
 const Inert = require('@hapi/inert');
 const Vision = require('@hapi/vision');
-const HapiSwagger = require('hapi-swagger');
+const HapiSwagger = require('hapi18-swagger');
 const Pack = require('./package');
 
 (async () => {
@@ -116,19 +119,19 @@ so the the full URL for the above options would be `http://localhost:3000/docume
 
 ### Typescript
 
-**hapi-swagger** exports its own typescript definition file that can be used when registering the plugin with **Hapi**. See example below:
+**hapi18-swagger** exports its own typescript definition file that can be used when registering the plugin with **Hapi**. See example below:
 
 #### Install Typescript Definition Files
 
 ```sh
-npm i @types/hapi__hapi @types/hapi__inert @types/hapi__joi @types/hapi__vision @types/node hapi-swagger --save-dev
+npm i @types/hapi__hapi @types/hapi__inert @types/hapi__joi @types/hapi__vision @types/node hapi18-swagger --save-dev
 ```
 
 #### Register Plugin with Typescript
 
 ```typescript
 import * as Hapi from '@hapi/hapi';
-import * as HapiSwagger from 'hapi-swagger';
+import * as HapiSwagger from 'hapi18-swagger';
 
 // code omitted for brevity
 
