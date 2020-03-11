@@ -1,7 +1,7 @@
 {
   "name": "hapi18-swagger",
   "description": "Fork from https://github.com/glennjones/hapi-swagger custom for hapi v18",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Glenn Jones",
   "repository": {
     "type": "git",
