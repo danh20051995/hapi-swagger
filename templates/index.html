@@ -72,6 +72,15 @@
           docExpansion: "{{hapiSwagger.expanded}}",
           tagsSorter: apisSorter.{{hapiSwagger.sortTags}},
           operationsSorter: operationsSorter.{{hapiSwagger.sortEndpoints}},
+          withCredentials: true, // enables passing credentials|same domain only
+          // requestInterceptor: function(request) { // customize request before send|add header or something more...
+          //   console.log(request)
+          //   return request
+          // },
+          // responseInterceptor: function(response) { // customize response data
+          //   console.log(response)
+          //   return response
+          // },
         }
 
         var ui = SwaggerUIBundle(swaggerOptions);
