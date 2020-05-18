@@ -61,13 +61,39 @@
         var ACCESS_TOKEN_QUERY_PARAM_NAME = 'access_token';
         var accessToken = getUrlVars()[ACCESS_TOKEN_QUERY_PARAM_NAME];
 
+        /** default turn off try it out */
+        function DisableTryItOutPlugin() {
+          return {
+            statePlugins: {
+              spec: {
+                wrapSelectors: {
+                  allowTryItOutFor: () => () => false
+                }
+              }
+            }
+          }
+        }
+
+        /** default turn on try it out */
+        function enableTryItOutPlugin() {
+          return {
+            statePlugins: {
+              spec: {
+                wrapSelectors: {
+                  allowTryItOutFor: () => () => true
+                }
+              }
+            }
+          }
+        }
+
         var swaggerOptions = {
           url: url + (accessToken ? (url.indexOf('?') < 0 ? '?' : '&') + ACCESS_TOKEN_QUERY_PARAM_NAME + '=' + accessToken : ''),
           validatorUrl: validatorUrl,
           dom_id: '#swagger-ui',
           deepLinking: true,
           presets: [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset],
-          plugins: [SwaggerUIBundle.plugins.DownloadUrl],
+          plugins: [SwaggerUIBundle.plugins.DownloadUrl, enableTryItOutPlugin],
           layout: 'StandaloneLayout',
           docExpansion: "{{hapiSwagger.expanded}}",
           tagsSorter: apisSorter.{{hapiSwagger.sortTags}},
