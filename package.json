@@ -62,7 +62,7 @@
     "@hapi/good": "^8.2.3",
     "@hapi/good-console": "^8.1.2",
     "@hapi/h2o2": "^8.2.0",
-    "@hapi/hapi": "^18.4.0",
+    "@hapi/hapi": "^19.1.1",
     "@hapi/inert": "^5.2.2",
     "@hapi/lab": "^20.3.2",
     "@hapi/vision": "^5.4.4",
