@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "@hapi/boom": "^8.0.1",
-    "@hapi/hoek": "^8.2.4",
+    "@hapi/hoek": "^9.0.4",
     "@hapi/joi": "^16.1.8",
     "handlebars": "^4.5.3",
     "http-status": "^1.0.1",
